@@ -1,0 +1,18 @@
+https://unix.stackexchange.com/questions/10365/i-am-failing-to-delete-a-partition-on-a-usb-drive-stick
+
+$ sudo fdisk  /dev/sdb
+[sudo] password for vivek: 
+
+Welcome to fdisk (util-linux 2.34).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+
+Command (m for help): d
+Selected partition 1
+Partition 1 has been deleted.
+
+Command (m for help): w
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Syncing disks.
