@@ -1,0 +1,15 @@
+https://stackoverflow.com/questions/42072591/setting-hystrix-timeout-with-environment-variable
+
+VM options and environment variables can be referenced from application configuration, which is often a more convenient way to set properties with longer names.
+
+For example, one can define the following reference in application.yml:
+
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: ${service.timeout}
+
+which will be resolved from the VM option -Dservice.timeout=10000, setting the default Hystrix command timeout to 10 seconds. It is even simpler with environment variables - thanks to relaxed binding, any of these will work (export examples are for Linux):
+
+export service.timeout=10000
+export service_timeout=10000
+export SERVICE.TIMEOUT=10000
+export SERVICE_TIMEOUT=10000
+The common approach is to use lowercase.dot.separated for VM arguments and ALL_CAPS_WITH_UNDERSCORES for environment variables.

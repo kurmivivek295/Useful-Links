@@ -1,0 +1,17 @@
+https://stackoverflow.com/questions/40447916/unable-to-get-hystrix-stream-in-spring-cloud
+
+For those who are using spring boot 2 (I am using 2.0.2.RELEASE), the hystrix.stream endpoint has been moved to /actuator/hystrix.stream.
+
+For me this url worked:
+
+http://localhost:8082/actuator/hystrix.stream
+And yes, have this actuator endpoint enabled via following property:
+
+management.endpoints.web.exposure.include=hystrix.stream
+
+In Spring Boot 1.5.x Hystrix.stream will only show data if there are actually call's being executed that are annotated with @HystrixCommand
+
+If you annotate a method it will publish data to the stream when its being used.
+
+More info: http://cloud.spring.io/spring-cloud-static/Brixton.SR6/#_circuit_breaker_hystrix_clients
+

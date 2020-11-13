@@ -1,4 +1,5 @@
 https://stackoverflow.com/questions/31662983/how-can-i-install-the-spring-tool-suite-in-ubuntu
+https://askubuntu.com/questions/64222/how-can-i-create-launchers-on-my-desktop
 
 Step 1: Download the latest Spring Tool Suite for Linux from STS official website: http://spring.io/tools/sts/all
 
@@ -21,3 +22,4 @@ Categories=Development;IDE;Java;
 Step 5: Now you can check from Quick Menu by typing "Spring"
 
 Note: Small additional update for Ubuntu 18.04 & STS 4+ use Absolute path instead of relative. Use Exec=/home/harishshan/springsource/sts-3.4.0-RELEASE/STS Icon=/home/harishshan/springsource/sts-3.4.0-RELEASE/icon.xpm dont'use Exec=~somedir/harishshan/springsource/sts-3.4.0-RELEASE/STS Icon=~somedir/springsource/sts-3.4.0-RELEASE/icon.xpm
+
